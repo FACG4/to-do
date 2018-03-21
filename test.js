@@ -2,6 +2,7 @@
 var test = require('tape');
 var logic = require('./logic');
 
+
 test('Example test', function(t) {
   var actual = logic.addTodo([], "eat");
   var expect = [{id:1,description:"eat",done:false}]
@@ -28,26 +29,14 @@ test('Example test',function(t){
 });
  
 
-var todelet = [{id:0,description:'run',done:false}];
-test('Example test',function(t){
-  var actual = logic.deleteTodo(todelet,0);
-  var expect = [];
 
-  t.deepEqual(actual, expect, "should delet obj");
+
+
+
+test('Sort test', function(t) {
+  var actual = logic.sortTodos([3, 2, 1]);
+  var expected = [1, 2, 3];
+  t.deepEqual(actual, expected, actual + " should turn into " + expected);
   t.end();
-
 });
-
-var todelet = [{id:0,description:'run',done:false}];
-test('Example test',function(t){
-  var actual = logic.deleteTodo(todelet,2);
-  var expect = todelet ;
-
-  t.deepEqual(actual, expect, "should delet obj");
-  t.end();
-
-});
- 
-
-
 
