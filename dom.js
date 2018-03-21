@@ -18,6 +18,7 @@
     // you will need to use addEventListener
 
     // add span holding description
+
     var span = document.createElement("span");
     span.textContent = todo.description;
     // this adds the delete button
@@ -62,12 +63,15 @@
       // what does event.preventDefault do?
       // what is inside event.target?
       event.preventDefault();
-      var description = event.target[0].value;
-      event.target[0].value = "";
-      // event.target ...
-      // hint: todoFunctions.addTodo
 
-      var newState = todoFunctions.addTodo(state, description); // ?? change this!
+=======
+      var descr = document.getElementsByName("description")[0].value;
+      event.target[0].value = "";
+      console.log(descr,'kmmjkmkm');
+
+      // hint: todoFunctions.addTodo
+      var newState = todoFunctions.addTodo(state,descr); // ?? change this!
+>>>>>>> a2e9c8067b601a34b90d471e3d95ea84bcdee18e
       update(newState);
     });
   }

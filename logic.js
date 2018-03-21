@@ -23,7 +23,7 @@ var todoFunctions = {
     });
   },
 
-  addTodo: function(todos, description) {
+  addTodo: function(todos, newTodo) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
@@ -31,18 +31,19 @@ var todoFunctions = {
     var todos2 = todoFunctions.cloneArrayOfObjects(todos);
     var obj = {
       id: todoFunctions.generateId(),
+      description: newTodo,
       done: false
     };
-    obj.description = description;
     todos2.push(obj);
     return todos2;
   },
+
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
-    var arr = todoFunctions.cloneArrayOfObjects(todos);
-    return arr.filter(function(todo) {
+    var todos2 = todoFunctions.cloneArrayOfObjects(todos);
+    return todos2.filter(function(todo) {
       return idToDelete !== todo.id;
     });
   },
@@ -69,7 +70,7 @@ var todoFunctions = {
       return todo;
     });
   },
-  sortTodos: function(todos) {
+  sortTodos: function(todos, sortFunction) {
     var sortArr = todoFunctions.cloneArrayOfObjects(todos);
     return sortArr.sort();
     // stretch goal! Do this last
