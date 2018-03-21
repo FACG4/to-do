@@ -3,21 +3,26 @@
 } */
 
 .delete{
-    background-color: red;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin:20px auto;
+  margin-left: 10px;
+  background-color:red;
+  color: black;
+  font-weight: bold;
 }
 
 body{
-   
-    height:100% ;
-    background-color:rgb(181, 185, 189);
-    
+height: 100%;
+
+
 
 }
 .con{
 
 text-align: center;
    padding-top: 40px;
-   width: 50%;
+   width: 80%;
    margin: auto;
 }
 .input_style{
@@ -34,33 +39,66 @@ text-align: center;
     margin:20px auto;
     margin-left: 10px;
     background-color:rgb(36, 101, 167);
+    font-weight: bold;
 }
 
 span {
-    width: 40%;
+    width: 60%;
     text-align: left;
+    display: inline-block;
+    font-size: 20px;
 }
 #todo-container{
-    width: 50%;
+    width: 80%;
     margin: auto;
+    background-color:
 }
 ul {
     list-style: none;
 }
 li {
     text-align: left;
+    display: block;
+
 }
 
 .delete {
-    text-align: right;
+    margin: auto;
 }
 
 .done {
-    /* max-width: 200%; */
-    float: right;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color:Green;
+    color: black;
+    font-weight: bold;
   }
-  
+
   .spanDone {
-    color: red;
+    color: green;
+    text-decoration-line: line-through;
+    font-size: 20px;
   }
-  
+
+  @media only screen and (max-width: 1000px){
+    #todo-container{
+        width: 100%;
+        margin: auto;
+        background-color:
+    }
+    span{
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 600px){
+    #todo-container{
+        width: 100%;
+        margin: auto;
+        background-color:
+    }
+    span{
+      text-align: left;
+    }
+  }
