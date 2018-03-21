@@ -1,0 +1,35 @@
+var todelet = [{id:0,description:'run',done:false}];
+test('Example test',function(t){
+  var actual = logic.deleteTodo(todelet,0);
+  var expect = [];
+
+  t.deepEqual(actual, expect, "should delet obj");
+  t.end();
+
+});
+
+var todelet = [{id:0,description:'run',done:false}];
+test('Example test',function(t){
+  var actual = logic.deleteTodo(todelet,2);
+  var expect = todelet ;
+
+  t.deepEqual(actual, expect, "should delet obj");
+  t.end();
+
+});
+
+
+
+  deleteTodo: function(todos, idToDelete) {
+    // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
+    // return a new array, this should not contain any todo with an id of idToDelete
+    // hint: array.filter
+   
+ var todos2 = todoFunctions.cloneArrayOfObjects(todos);
+    return  todos2.filter(function(todo){
+       return idToDelete !== todo.id;
+      })
+  },
+
+
+

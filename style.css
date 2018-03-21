@@ -55,3 +55,12 @@ li {
     text-align: right;
 }
 
+.done {
+    /* max-width: 200%; */
+    float: right;
+  }
+  
+  .spanDone {
+    color: red;
+  }
+  
