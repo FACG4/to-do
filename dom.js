@@ -61,7 +61,9 @@
       // what does event.preventDefault do?
       // what is inside event.target?
       event.preventDefault();
+
       var descr = document.getElementsByName("description")[0].value;
+      event.target[0].value = "";
       var newState = todoFunctions.addTodo(state, descr); // ?? change this!
 
       update(newState);
