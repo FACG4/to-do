@@ -28,11 +28,22 @@ var todoFunctions = {
     // returns a new array, it should contain todos with the newTodo added to the end.
     // add an id to the newTodo. You can use the generateId function to create an id.
     // hint: array.concat
+    var todos2 = todoFunctions.cloneArrayOfObjects(todos);
+    var obj ={id:todoFunctions.generateId(),description:newTodo,done: false}; 
+   todos2.push(obj);
+   return todos2;
   },
+
+
   deleteTodo: function(todos, idToDelete) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
+    var todos2 = todoFunctions.cloneArrayOfObjects(todos);
+    return  todos2.filter(function(todo){
+       return idToDelete !== todo.id;
+      })
+
   },
   markTodo: function(todos, idToMark) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
@@ -48,3 +59,4 @@ var todoFunctions = {
   },
 };
 
+module.exports= todoFunctions;
