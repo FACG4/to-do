@@ -64,14 +64,13 @@
       // what is inside event.target?
       event.preventDefault();
 
-=======
       var descr = document.getElementsByName("description")[0].value;
       event.target[0].value = "";
-      console.log(descr,'kmmjkmkm');
+      console.log(descr, "kmmjkmkm");
 
       // hint: todoFunctions.addTodo
-      var newState = todoFunctions.addTodo(state,descr); // ?? change this!
->>>>>>> a2e9c8067b601a34b90d471e3d95ea84bcdee18e
+      var newState = todoFunctions.addTodo(state, descr); // ?? change this!
+
       update(newState);
     });
   }
