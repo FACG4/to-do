@@ -1,0 +1,22 @@
+.done {
+  /* max-width: 200%; */
+  float: right;
+}
+
+.spanDone {
+  color: red;
+}
+
+ul li {
+  list-style: none;
+}
+
+#todo-container {
+  background-color: grey;
+  max-width: 70%;
+  margin: auto;
+}
+#add-todo {
+  max-width: 70%;
+  margin: auto;
+}
