@@ -7,10 +7,10 @@
 }
 
 body{
-   
+
     height:100% ;
     background-color:rgb(181, 185, 189);
-    
+
 
 }
 .con{
@@ -37,11 +37,12 @@ text-align: center;
 }
 
 span {
-    width: 40%;
+    width: 60%;
     text-align: left;
+    display: inline-block;
 }
 #todo-container{
-    width: 50%;
+    width: 80%;
     margin: auto;
 }
 ul {
@@ -49,18 +50,19 @@ ul {
 }
 li {
     text-align: left;
+    display: block;
+
 }
 
 .delete {
-    text-align: right;
+    margin: auto;
 }
 
 .done {
     /* max-width: 200%; */
     float: right;
   }
-  
+
   .spanDone {
     color: red;
   }
-  
