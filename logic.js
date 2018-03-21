@@ -43,6 +43,7 @@ var todoFunctions = {
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
     var todos2 = todoFunctions.cloneArrayOfObjects(todos);
+
     return todos2.filter(function(todo) {
       return idToDelete !== todo.id;
     });

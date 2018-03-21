@@ -6,11 +6,8 @@
   var container = document.getElementById("todo-container");
   var addTodoForm = document.getElementById("add-todo");
 
-  var state = [
-    { id: -3, description: "first todo", done: false },
-    { id: -2, description: "second todo", done: false },
-    { id: -1, description: "third todo", done: false }
-  ]; // this is our initial todoList
+  var state = []; // this is our initial todoList
+
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
@@ -32,6 +29,7 @@
     });
 
     todoNode.appendChild(deleteButtonNode);
+    
 
     // add markTodo button
     var doneButton = document.createElement("button");
@@ -63,17 +61,12 @@
       // what does event.preventDefault do?
       // what is inside event.target?
       event.preventDefault();
-
       var descr = document.getElementsByName("description")[0].value;
-      event.target[0].value = "";
-      console.log(descr, "kmmjkmkm");
-
-      // hint: todoFunctions.addTodo
       var newState = todoFunctions.addTodo(state, descr); // ?? change this!
 
       update(newState);
     });
-  }
+  };
 
   // you should not need to change this function
   var update = function(newState) {
