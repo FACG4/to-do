@@ -1,7 +1,6 @@
 // Part 1. Fill in any missing parts of the todoFunction object!
 // you can access these on todo.todoFunctions
 // For part one we expect you to use tdd
-
 var todoFunctions = {
   // todoFunctions.generateId() will give you a unique id
   // You do not need to understand the implementation of this function.
@@ -14,15 +13,15 @@ var todoFunctions = {
 
     return incrementCounter;
   })(),
-  
-  //cloneArrayOfObjects will create a copy of the todos array 
+
+  //cloneArrayOfObjects will create a copy of the todos array
   //changes to the new array don't affect the original
   cloneArrayOfObjects: function(todos) {
     return todos.map(function(todo){
       return JSON.parse(JSON.stringify(todo));
     });
   },
-  
+
   addTodo: function(todos, newTodo) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // returns a new array, it should contain todos with the newTodo added to the end.
@@ -33,6 +32,14 @@ var todoFunctions = {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
     // return a new array, this should not contain any todo with an id of idToDelete
     // hint: array.filter
+    /*var todo1 = todoFunctions.cloneArrayOfObjects(todos);
+    todo1=todo1.filter(function(todo){
+        return todo!=idToDelete;*/
+        var arr = todoFunctions.cloneArrayOfObjects(todos);
+        return arr.filter(function(todo){
+          return idToDelete!== todo.id
+        });
+
   },
   markTodo: function(todos, idToMark) {
     // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
@@ -48,3 +55,5 @@ var todoFunctions = {
   },
 };
 
+
+module.exports = todoFunctions;
