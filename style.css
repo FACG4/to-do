@@ -1,0 +1,57 @@
+/* body{
+    background-color: red
+} */
+
+.delete{
+    background-color: red;
+}
+
+body{
+   
+    height:100% ;
+    background-color:rgb(181, 185, 189);
+    
+
+}
+.con{
+
+text-align: center;
+   padding-top: 40px;
+   width: 50%;
+   margin: auto;
+}
+.input_style{
+    border: 2px solid slategrey;
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin-right: 10px;
+    margin:20px auto;
+}
+.sub{
+    border: 2px solid slategray;
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin:20px auto;
+    margin-left: 10px;
+    background-color:rgb(36, 101, 167);
+}
+
+span {
+    width: 40%;
+    text-align: left;
+}
+#todo-container{
+    width: 50%;
+    margin: auto;
+}
+ul {
+    list-style: none;
+}
+li {
+    text-align: left;
+}
+
+.delete {
+    text-align: right;
+}
+

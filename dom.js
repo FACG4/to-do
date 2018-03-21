@@ -6,11 +6,7 @@
   var container = document.getElementById('todo-container');
   var addTodoForm = document.getElementById('add-todo');
 
-  var state = [
-    { id: -3, description: 'first todo' },
-    { id: -2, description: 'second todo' },
-    { id: -1, description: 'third todo' },
-  ]; // this is our initial todoList
+  var state = []; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
@@ -18,9 +14,9 @@
     // you will need to use addEventListener
 
     // add span holding description
-    // var span = document.createElement('span');
+     var span = document.createElement('span');
     todoNode.textContent =todo.description;
-    // todoNode.appendChild(span);
+    todoNode.appendChild(span);
 
     // this adds the delete classNamebutton
     var deleteButtonNode = document.createElement('button');
@@ -31,6 +27,7 @@
     deleteButtonNode.textContent='Delete';
     deleteButtonNode.className = 'delete';
     todoNode.appendChild(deleteButtonNode);
+    
 
     // add markTodo button
 
@@ -47,7 +44,7 @@
       // what is inside event.target?
       event.preventDefault();
       var descr = document.getElementsByName("description")[0].value;
-      console.log(descr,'kmmjkmkm');
+    
       
       // hint: todoFunctions.addTodo
       var newState = todoFunctions.addTodo(state,descr); // ?? change this!

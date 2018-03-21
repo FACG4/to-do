@@ -43,6 +43,7 @@ var todoFunctions = {
     // hint: array.filter
     var todos2 = todoFunctions.cloneArrayOfObjects(todos);
     return  todos2.filter(function(todo){
+      
        return idToDelete !== todo.id;
       })
 
@@ -63,6 +64,6 @@ var todoFunctions = {
   },
 };
 
-
-module.exports= todoFunctions;
-
+if(typeof module !== "undefined"){
+module.exports = todoFunctions;
+}
