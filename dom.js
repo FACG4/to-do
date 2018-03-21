@@ -29,7 +29,7 @@
     });
 
     todoNode.appendChild(deleteButtonNode);
-    
+
 
     // add markTodo button
     var doneButton = document.createElement("button");
@@ -64,9 +64,15 @@
 
       var descr = document.getElementsByName("description")[0].value;
       event.target[0].value = "";
-      var newState = todoFunctions.addTodo(state, descr); // ?? change this!
+      if (descr.trim().length > 0) {
+        var newState = todoFunctions.addTodo(state, descr); // ?? change this!
 
-      update(newState);
+        update(newState);
+      }
+      else {
+        alert('You should write todo');
+      }
+
     });
   };
 
