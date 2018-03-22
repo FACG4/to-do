@@ -1,14 +1,42 @@
 # to-do app
 
-## Our to do App
-We built our to-do app using TDD.Simple todo list that adds, deletes, marks as read, modifies and maybe sorts notes.
+## Simple to do App
+We built our to-do app using TDD. Simple todo list that adds, deletes, marks as read.
 
-##Why
+## Objectives:
+#### Learn TDD and DOM.
 
-This app helps people to organize their chores in the day-to-day life.
+## What we learned:
+
+* #### DOM:
+
+  * Creating event listeners.
+  * Fetching elements and functions from other files.
+  * creating local Storage.
+
+* #### TDD:
+  * Create and apply tests.
 
 
-##What did we learn?
+## Functionality:
 
-We learned how to arrange our project into files.
-We learned how make TDD tests, pure functions and DOM manipulation.
+### Add elements:
+* Inputs todo tasks into a list.
+* Prevents Default.
+* Trims the input, returns alert if empty.
+* Successfully tested.
+
+
+### Delete elements:
+* identifies element by ID.
+* deletes using the array.filter() method.
+* Successfully tested.
+
+### Mark as done:
+* identifies elements by ID.
+* marks items using array.map() method instead of for loop.
+* successfully tested.
+
+
+### Problems:
+* Duplicate IDs.
