@@ -1,6 +1,11 @@
 // part 2 linking it all together
 // The function here is called an iife,
 // it keeps everything inside hidden from the rest of our application
+
+
+
+
+
 (function() {
   // This is the dom node where we will keep our todo
   var container = document.getElementById("todo-container");
@@ -8,7 +13,13 @@
 
   var state = []; // this is our initial todoList
 
-
+  if(localStorage.getItem("a")== null){
+    state=[];
+    } else{
+      state=localStorage.getItem("a")
+      state=JSON.parse(state);
+    
+    }
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement("li");
@@ -88,7 +99,11 @@
 
     state.forEach(function(todo) {
       todoListNode.appendChild(createTodoNode(todo));
+
     });
+   
+    localStorage.setItem("a",JSON.stringify(state));
+
 
     // you may want to add a class for css
     container.replaceChild(todoListNode, container.firstChild);
